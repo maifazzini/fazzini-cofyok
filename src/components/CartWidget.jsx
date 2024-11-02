@@ -6,7 +6,6 @@ const CartWidget= () => {
         <div className="carrito">
             <TiShoppingCart className="carrito-icono"/>
             <Badge pill  className="badge-carrito"> 2</Badge>
-            {/* <p>2</p> */}
         </div>
     )
 }
