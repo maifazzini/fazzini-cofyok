@@ -1,12 +1,13 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
-import NavBar from './components/NavBar'
+import NavBarBootstrap from './components/NavBarBootstrap'
 import ItemListContainer from './components/ItemListContainer'
 
 function App() {
 
   return (
     <div>
-      <NavBar />
+      <NavBarBootstrap />
       <ItemListContainer greeting={"Encontrá los mejores cafes aca"} />
     </div>
   )

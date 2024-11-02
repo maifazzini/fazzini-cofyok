@@ -1,8 +1,12 @@
+import { TiShoppingCart } from "react-icons/ti";
+import Badge from 'react-bootstrap/Badge';
+
 const CartWidget= () => {
     return(
         <div className="carrito">
-            <img src="./image/carrito.png" alt="carrito" />
-            <p>2</p>
+            <TiShoppingCart className="carrito-icono"/>
+            <Badge pill  className="badge-carrito"> 2</Badge>
+            {/* <p>2</p> */}
         </div>
     )
 }

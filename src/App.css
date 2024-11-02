@@ -17,36 +17,28 @@ a{
   text-decoration: none;
 }
 
-
-.nav-bar{
-  background-color: #F9DCB4;
-  color: #4B1B0D;
-  padding: 20px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+/* -------------------nav bar------------------------ */
+.nav-bar, .bg-body-tertiary{
+  background-color: #F9DCB4 !important;
+  color: #7b391f;
+}
+.nav-bar .navbar-toggler{
+  color: #7b391f;
 }
 
-.nav-bar ul{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  list-style: none;
-  width: 70%;
-}
-.nav-bar ul li a{
-  color: #4B1B0D;
+.nav-bar .menu-item{
+  color: #7b391f;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-style: normal;
   padding: 10px;
 }
-.nav-bar ul li a:hover{
+/* .nav-bar .menu-item:hover{
   background-color: #4B1B0D;
   color: #FDF4E1;
   border-radius: 20px;
   padding: 10px;
-}
+} */
 h1{
   font-size: 0;
   background: url(./image/logo.png) no-repeat;
@@ -57,12 +49,30 @@ h1{
 .carrito{
   display: flex;
   justify-content: space-between;
-  align-items: top;
+  align-items: center;
+  padding: 10px;
 }
-.carrito p{
+.carrito .badge-carrito{
   font-family: "Poppins", sans-serif;
   font-size: 0.8rem;
+  background-color: #7b391f !important;
+  color: #FDF4E1;
 }
+.carrito .carrito-icono{
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 992px){
+  .carrito{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 10px;
+  }
+}
+
+/* ---------------------inicio---------------------- */
+
 .hero-section{
   display: flex;
   justify-content: space-between;
@@ -80,10 +90,36 @@ h1{
 .hero-section div h2{
   margin-bottom: 20px;
 }
-.hero-section div a{
+.hero-section div .boton{
   background-color:  #4B1B0D;
   color: #CCA55E;
   font-family: "Poppins", sans-serif;
   padding: 10px;
   border-radius: 5px;
+}
+
+@media screen and (max-width: 992px){
+  .hero-section div h2{
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 650px){
+  .hero-section div{
+    padding-left: 60px;
+  }
+  .hero-section div h2{
+    font-size: 24px;
+  }
+  .hero-section div .boton{
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 460px){
+  .hero-section img{
+    display: none;
+  }
+  .hero-section div{
+    padding: 60px;
+    text-align: center;
+  }
 }
