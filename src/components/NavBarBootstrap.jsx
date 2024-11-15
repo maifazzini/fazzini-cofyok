@@ -5,7 +5,7 @@ import CartWidget from "./CartWidget"
 
 function NavBarBootstrap() {
     return (
-        <>
+        <header>
             <Navbar expand="lg" className="bg-body-tertiary nav-bar">
                 <Container>
                     <Navbar.Brand href="#home"><h1>Cofyok</h1></Navbar.Brand>
@@ -21,7 +21,7 @@ function NavBarBootstrap() {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-        </>
+        </header>
     );
 }
 
