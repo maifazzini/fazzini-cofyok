@@ -3,15 +3,21 @@ import './App.css'
 import NavBarBootstrap from './components/NavBarBootstrap'
 import ItemListContainer from './components/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
 
   return (
-    <div>
-      <NavBarBootstrap />
-      <ItemListContainer greeting={"Encontrá los mejores cafes aca"} />
-      <ItemDetailContainer/>
-    </div>
+    <>
+      <BrowserRouter>
+        <NavBarBootstrap />
+        <Routes>
+          <Route path='/' element={<ItemListContainer greeting={"Encontrá los mejores cafes aca"} />} />
+          <Route path='/categoria/:categoriaid' element={<ItemListContainer greeting={"Encontrá los mejores cafes aca"} />} />
+          <Route path='/item/:id' element={<ItemDetailContainer/>}/>
+        </Routes>
+      </BrowserRouter>
+    </>
   )
 }
 

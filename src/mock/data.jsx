@@ -5,9 +5,8 @@ const productos = [
         stock: 50,
         precio: 17200,
         descripcion:"Blend de especialidad de granos de Latinoamérica Es un café de tostado medio con sabores a vainilla. Presentación: 12 capsulas por caja de 15gr cada una.",
-        imagen: "./image/capsula-roma.png",
-        categoria1: "Roma",
-        categoria2: "capsula"
+        imagen: "../image/capsula-roma.png",
+        categoria: "capsulas"
     },
     {
         id: 2,
@@ -15,9 +14,8 @@ const productos = [
         stock: 16,
         precio: 16800,
         descripcion:"Blend de especialidad de granos de Italia. Es un café de tostado medio con sabores a almendras y hierbas frescas. Presentación: 12 capsulas por caja de 15gr cada una.",
-        imagen: "./image/capsula-paris.png",
-        categoria1: "Paris",
-        categoria2: "capsula"
+        imagen: "../image/capsula-paris.png",
+        categoria: "capsulas"
     },
     {
         id: 3,
@@ -25,9 +23,8 @@ const productos = [
         stock: 22,
         precio: 17900,
         descripcion:"Blend de especialidad de granos de Italia. Es un café de tostado oscuro con sabores a cacao amargo y notas madera. Presentación: 12 capsulas por caja de 15gr cada una.",
-        imagen: "./image/capsula-bangoo.png",
-        categoria1: "Bangoo",
-        categoria2: "capsula"
+        imagen: "../image/capsula-bangoo.png",
+        categoria: "capsulas"
     },
     {
         id: 4,
@@ -35,9 +32,8 @@ const productos = [
         stock: 8,
         precio: 12600,
         descripcion:"Blend de especialidad de granos de Italia. Es un café de tostado oscuro con sabores a cacao amargo y notas madera. Presentación: Paquete de 300gr.",
-        imagen: "./image/cafebangoo.png",
-        categoria1: "Bangoo",
-        categoria2: "en grano"
+        imagen: "../image/cafebangoo.png",
+        categoria: "en grano"
     },
     {
         id: 5,
@@ -45,19 +41,26 @@ const productos = [
         stock: 35,
         precio: 11700,
         descripcion:"Blend de especialidad de granos de Italia. Es un café de tostado medio con sabores a almendras y hierbas frescas. Presentación: Paquete de 300gr.",
-        imagen: "./image/cafeparis.png",
-        categoria1: "Paris",
-        categoria2: "en grano"
+        imagen: "../image/cafeparis.png",
+        categoria: "en grano"
     },
     {
         id: 6,
-        nombre: "Capsula Roma",
+        nombre: "Grano Roma",
         stock: 42,
         precio: 10900,
         descripcion:"Blend de especialidad de granos de Latinoamérica Es un café de tostado medio con sabores a vainilla. Presentación: Paquete de 300gr.",
-        imagen: "./image/caferoma.png",
-        categoria1: "Roma",
-        categoria2: "en grano"
+        imagen: "../image/caferoma.png",
+        categoria: "en grano"
+    },
+    {
+        id: 7,
+        nombre: "Vaso Cofyok",
+        stock: 6,
+        precio: 7000,
+        descripcion:"Vaso termico ideal para llevar tu cafe con el logo en dorado de Cofyok.",
+        imagen: "../image/vaso.png",
+        categoria: "vasos",
     },
 ]
 
@@ -82,7 +85,7 @@ export const productoporid = (id) =>{
             if(error){
                 reject('Hubo un error, intente mas tarde')
             }else{
-                resolve(productos.find((producto)=>producto.id===id))
+                resolve(productos.find((producto)=>producto.id=== parseInt(id)))
             
             }
         },2000)

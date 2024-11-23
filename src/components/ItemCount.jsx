@@ -8,7 +8,7 @@ const ItemCount = ({stock, initial, onAdd }) => {
         }
     }
     const restar = () => {
-        if (contador > initial){
+        if (contador > 0){
             setcontador(contador - 1 );
         }
     }

@@ -32,6 +32,11 @@ button {
   padding: 0;
 }
 
+.link, .nav-link.active {
+  color: #4B1B0D;
+  text-decoration: none;
+}
+
 /* -------------------nav bar------------------------ */
 .nav-bar,
 .bg-body-tertiary {
@@ -51,15 +56,15 @@ button {
   padding: 10px;
 }
 
-/* .nav-bar .menu-item:hover{
-  background-color: #4B1B0D;
-  color: #FDF4E1;
-  border-radius: 20px;
-  padding: 10px;
-} */
+.navbar-nav .nav-link.active {
+  transform: scale(1.2);
+  padding: 10px 15px;
+  color: #4B1B0D;
+}
+
 h1 {
   font-size: 0;
-  background: url(./image/logo.png) no-repeat;
+  background: url(../image/logo.png) no-repeat;
   background-size: cover;
   width: 131px;
   height: 70px;
@@ -104,7 +109,7 @@ h1 {
 }
 
 .hero-section img {
-  width: 50%;
+  width: 25%;
 }
 
 .hero-section div {
@@ -113,7 +118,7 @@ h1 {
 }
 
 .hero-section div h2 {
-  margin-bottom: 20px;
+  font-size: 40px;
 }
 
 .boton {
@@ -142,6 +147,14 @@ h1 {
   color: #4B1B0D;
   background-color: #FDF4E1;
   text-align: center;
+}
+
+.contenedor-productos h3 {
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 15px; 
+  margin-bottom: 15px; 
 }
 
 .contenedor-productos div {
@@ -214,9 +227,10 @@ h1 {
 }
 
 /* ---------------------CONTADOR------------------- */
-.contador{
+.contador {
   padding: 20px;
 }
+
 .contador div {
   display: flex;
   justify-content: space-around;
@@ -226,31 +240,40 @@ h1 {
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   padding: 10px;
-  width:300px;
+  width: 300px;
   margin-bottom: 15px;
 }
 
-.contador .sin-stock{
+.contador .sin-stock {
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   padding-top: 10px;
   color: #4B1B0D;
 }
-.contador button{
+
+.contador button {
   color: #FDF4E1;
 }
 
 
 /* Detalle del producto */
-.detalle-del-producto{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.detalle-del-producto-contenedor {
   color: #4B1B0D;
   background-color: #FDF4E1;
   padding: 60px 150px;
   height: 100vh;
 }
-.detalle-del-producto div{
+
+.detalle-del-producto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.detalle-del-producto .precio{
+  font-weight: 700;
+  margin-top: 15px;
+  font-size: 28px;
+}
+.detalle-del-producto div {
   width: 50%;
 }
