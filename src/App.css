@@ -32,7 +32,8 @@ button {
   padding: 0;
 }
 
-.link, .nav-link.active {
+.link,
+.nav-link.active {
   color: #4B1B0D;
   text-decoration: none;
 }
@@ -96,6 +97,10 @@ h1 {
     align-items: center;
     padding: 10px;
   }
+
+  .navbar-nav .nav-link.active {
+    transform: scale(1);
+  }
 }
 
 /* ---------------------inicio---------------------- */
@@ -123,10 +128,14 @@ h1 {
 
 .boton {
   background-color: #4B1B0D;
-  color: #CCA55E;
+  color: #FDF4E1;
   font-family: "Poppins", sans-serif;
   padding: 12px;
   border-radius: 10px;
+}
+
+.boton:disabled {
+  opacity: 40%;
 }
 
 .pagina-cargando {
@@ -153,8 +162,8 @@ h1 {
   text-transform: uppercase;
   font-size: 32px;
   font-weight: 600;
-  margin-top: 15px; 
-  margin-bottom: 15px; 
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .contenedor-productos div {
@@ -181,7 +190,7 @@ h1 {
   height: 249px;
 }
 
-.contenedor-productos .producto h3 {
+.contenedor-productos .producto h4 {
   text-transform: uppercase;
   font-size: 32px;
   font-weight: 600;
@@ -195,38 +204,63 @@ h1 {
   font-size: 15px;
 }
 
+/* ---------------------------media inicio y categorias--------------------------- */
 @media screen and (max-width: 992px) {
   .hero-section div h2 {
-    font-size: 32px;
+    font-size: 30px;
+  }
+
+  .contenedor-productos h2 {
+    font-size: 35px;
+  }
+
+  .contenedor-productos .producto h4 {
+    font-size: 30px;
   }
 }
 
-@media screen and (max-width: 650px) {
-  .hero-section div {
-    padding-left: 60px;
-  }
-
-  .hero-section div h2 {
-    font-size: 24px;
-  }
-
-  .hero-section div .boton {
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 460px) {
-  .hero-section img {
-    display: none;
+@media screen and (max-width: 850px) {
+  .contenedor-productos div {
+    justify-content: center;
   }
 
   .hero-section div {
     padding: 60px;
     text-align: center;
+    width: 100%;
+  }
+
+  .hero-section img {
+    display: none;
+  }
+
+  .contenedor-productos h3 {
+    font-size: 30px;
   }
 }
 
-/* ---------------------CONTADOR------------------- */
+@media screen and (max-width: 575px) {
+  .contenedor-productos .producto h4 {
+    font-size: 20px;
+  }
+
+  .contenedor-productos {
+    padding: 60px;
+  }
+
+  .contenedor-productos h2 {
+    font-size: 30px;
+  }
+  .hero-section div h2, .contenedor-productos h3 {
+    font-size: 25px;
+  }
+}
+
+
+
+
+
+/*! -------------------------------------CONTADOR----------------------------------------------- */
 .contador {
   padding: 20px;
 }
@@ -256,7 +290,7 @@ h1 {
 }
 
 
-/* Detalle del producto */
+/*!------------------------------- Detalle del producto------------------------------ */
 .detalle-del-producto-contenedor {
   color: #4B1B0D;
   background-color: #FDF4E1;
@@ -269,11 +303,88 @@ h1 {
   justify-content: space-between;
   align-items: center;
 }
-.detalle-del-producto .precio{
+
+.detalle-del-producto .precio {
   font-weight: 700;
   margin-top: 15px;
   font-size: 28px;
 }
-.detalle-del-producto div {
+
+.detalle-del-producto>div {
   width: 50%;
+}
+
+@media screen and (max-width: 1200px) {
+  .detalle-del-producto-contenedor {
+    padding: 80px;
+  }
+  .detalle-del-producto>div {
+    margin-left: 50px;
+  }
+  
+  
+}
+@media screen and (max-width: 980px){
+  .detalle-del-producto div h2{
+    font-size: 40px;
+  }
+  .detalle-del-producto div p{
+    font-size: 20px;
+  }
+  .detalle-del-producto img{
+    width: 40%;
+  }
+  .contador div {
+    font-size: 15px;
+    width: 200px;
+  }
+}
+@media screen and (max-width: 790px){
+  .detalle-del-producto div h2{
+    font-size: 30px;
+  }
+  .detalle-del-producto div p{
+    font-size: 15px;
+  }
+  .detalle-del-producto .precio {
+    font-size: 20px;
+  }
+  .contador div {
+    font-size: 10px;
+    width: 150px;
+  }
+  .contador .boton{
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 650px){
+  .detalle-del-producto {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .detalle-del-producto img{
+    width: 70%;
+  }
+  .detalle-del-producto>div {
+    margin-left: 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .detalle-del-producto-contenedor {
+    padding: 60px;
+  }
+  .contador{
+    margin-left: 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .detalle-del-producto-contenedor {
+    height: auto;
+  }
 }

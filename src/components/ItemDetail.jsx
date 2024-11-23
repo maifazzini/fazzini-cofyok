@@ -11,14 +11,14 @@ const ItemDetail = ({ productoporid }) => {
     <div className="detalle-del-producto-contenedor">
       <Link className="link" to={"/"}><FaArrowLeft/> </Link>
       <div className="detalle-del-producto">
-        <div>
+        
           <img src={productoporid.imagen} alt={productoporid.nombre} />
-        </div>
+        
         <div>
           <h2>{productoporid.nombre}</h2>
           <p>{productoporid.descripcion}</p>
           <p className='precio'>${productoporid.precio}</p>
-          <ItemCount initial={1} onAdd={onAdd} stock={45} />
+          <ItemCount initial={1} onAdd={onAdd} stock={productoporid.stock} />
         </div>
       </div>
     </div>

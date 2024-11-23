@@ -1,18 +1,18 @@
-import React, {useState}from 'react'
+import React, { useState } from 'react'
 
-const ItemCount = ({stock, initial, onAdd }) => {
+const ItemCount = ({ stock, initial, onAdd }) => {
     const [contador, setcontador] = useState(initial)
     const sumar = () => {
-        if (contador < stock){
-            setcontador(contador + 1 );
+        if (contador < stock) {
+            setcontador(contador + 1);
         }
     }
     const restar = () => {
-        if (contador > 0){
-            setcontador(contador - 1 );
+        if (contador > 0) {
+            setcontador(contador - 1);
         }
     }
-    const onAddHandler = () =>{
+    const onAddHandler = () => {
         onAdd(contador);
     }
     return (
@@ -20,9 +20,10 @@ const ItemCount = ({stock, initial, onAdd }) => {
             <div>
                 <button onClick={restar}>-</button>
                 <p>{contador}</p>
-                <button  onClick={sumar}>+</button>
+                <button onClick={sumar}>+</button>
             </div>
-            {stock>0?<button className= "boton" onClick={onAddHandler}>Agregar al carrito</button>: <p className='sin-stock'> No hay stock</p> }
+            <button disabled={stock <= 0 || contador === 0} className="boton" onClick={onAddHandler}>Agregar al carrito</button>
+            {stock <= 0 && <p className='sin-stock'> No hay stock</p>}
         </div>
     )
 }
