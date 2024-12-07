@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import CartWidget from "./CartWidget";
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 function NavBarBootstrap() {
     return (
@@ -18,7 +18,9 @@ function NavBarBootstrap() {
                             <Nav.Link to="/categoria/en grano" className='menu-item' as= {NavLink}>Granos</Nav.Link>
                             <Nav.Link to="/categoria/vasos" className='menu-item' as= {NavLink}>Vasos</Nav.Link>
                         </Nav>
-                        <CartWidget to="/carrito" className="ml-auto" as= {NavLink} />
+                        <NavLink to="/cart" >
+                        <CartWidget/>
+                        </NavLink>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

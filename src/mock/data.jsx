@@ -1,15 +1,5 @@
-const productos = [
+export const productos = [
     {
-        id: 1,
-        nombre: "Capsula Roma",
-        stock: 50,
-        precio: 17200,
-        descripcion:"Blend de especialidad de granos de Latinoamérica Es un café de tostado medio con sabores a vainilla. Presentación: 12 capsulas por caja de 15gr cada una.",
-        imagen: "../image/capsula-roma.png",
-        categoria: "capsulas"
-    },
-    {
-        id: 2,
         nombre: "Capsula Paris",
         stock: 16,
         precio: 16800,
@@ -18,7 +8,6 @@ const productos = [
         categoria: "capsulas"
     },
     {
-        id: 3,
         nombre: "Capsula Bangoo",
         stock: 22,
         precio: 17900,
@@ -27,7 +16,6 @@ const productos = [
         categoria: "capsulas"
     },
     {
-        id: 4,
         nombre: "Grano Bangoo",
         stock: 8,
         precio: 12600,
@@ -36,7 +24,6 @@ const productos = [
         categoria: "en grano"
     },
     {
-        id: 5,
         nombre: "Grano Paris",
         stock: 35,
         precio: 11700,
@@ -45,7 +32,6 @@ const productos = [
         categoria: "en grano"
     },
     {
-        id: 6,
         nombre: "Grano Roma",
         stock: 42,
         precio: 10900,
@@ -54,7 +40,6 @@ const productos = [
         categoria: "en grano"
     },
     {
-        id: 7,
         nombre: "Vaso Cofyok",
         stock: 6,
         precio: 7000,
