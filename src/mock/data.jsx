@@ -1,4 +1,4 @@
-export const productos = [
+export const productosarray = [
     {
         nombre: "Capsula Paris",
         stock: 16,

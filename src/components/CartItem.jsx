@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const CartItem = () => {
+const CartItem = ({producto}) => {
   return (
     <div>
-        <Link className='boton' to={"/checkout"}>Terminar compre</Link>
+        <p>producto.nombre</p>
     </div>
   )
 }

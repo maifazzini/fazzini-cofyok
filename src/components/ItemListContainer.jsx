@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from "react"
-import {listadoproductos} from "../mock/data"
+import {productosarray} from "../mock/data"
 import ItemList from "./ItemList"
 import { useParams } from "react-router-dom"
 import Loader from "./Loader"
-import { collection, getDocs, where, query } from "firebase/firestore"
+import { collection, getDocs, where, query, addDoc } from "firebase/firestore"
 import { db } from "../services/firebase"
 
 
@@ -30,7 +30,6 @@ const ItemListContainer = ({greeting}) => {
         .catch(()=> seterror(true))
         .finally(()=>setcargando(false))
     }, [categoriaid])
-
     return(
         <main>
             <section className="hero-section">
