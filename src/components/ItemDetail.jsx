@@ -3,12 +3,22 @@ import ItemCount from "./ItemCount"
 import { FaArrowLeft } from "react-icons/fa";
 import { Link} from 'react-router-dom';
 import { useCart } from '../context/CartContext';
+import Toastify from 'toastify-js'
+import "toastify-js/src/toastify.css"
 
 const ItemDetail = ({ productoporid }) => {
   const {addItem}= useCart();
   const [compra, setCompra]= useState (false);
   const onAdd = (cantidad) => {
-    alert(`Agregaste al carrito ${cantidad} productos`);
+    Toastify({
+      text: `Agregaste al carrito ${cantidad} ${productoporid.nombre}`,
+      duration: 3000,
+      gravity: "bottom", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      style: {
+        background: "#CCA55E",
+      },
+    }).showToast();
     setCompra(true)
     addItem(productoporid, cantidad);
   };

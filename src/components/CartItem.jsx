@@ -4,7 +4,10 @@ import { Link } from 'react-router-dom'
 const CartItem = ({producto}) => {
   return (
     <div>
-        <p>producto.nombre</p>
+      <img src={producto.imagen} alt={producto.nombre} />
+        <p>{producto.nombre}</p>
+        <p>Cantidad :{producto.cantidad}</p>
+        <p>Total unitario: ${ producto.precio * producto.cantidad}</p>
     </div>
   )
 }

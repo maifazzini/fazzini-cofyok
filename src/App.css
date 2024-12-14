@@ -383,7 +383,22 @@ h1 {
     height: auto;
   }
 }
-
+/* ---------------------error detalle producto-------------- */
+.error-producto-detalle{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #4B1B0D;
+  background-color: #FDF4E1;
+}
+.error-producto-detalle .icono-cafe{
+  font-size: 20vh;
+}
+.error-producto-detalle .boton{
+  margin-top: 10vh;
+}
 .pagina-cargando {
   height: 100vh;
   display: flex;

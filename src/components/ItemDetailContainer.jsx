@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { productoporid } from '../mock/data';
+import { TbCoffeeOff } from "react-icons/tb";
 import ItemDetail from './ItemDetail'
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Loader from './Loader';
 import { collection, getDoc, doc} from 'firebase/firestore';
 import { db } from '../services/firebase';
@@ -11,25 +11,31 @@ const ItemDetailContainer = () => {
     const [producto, setproducto] = useState([]);
     const [error, seterror] = useState(null);
     const [cargando, setcargando] = useState(false);
+    const [invalido, setinvalido] = useState (false);
     useEffect(() => {
         setcargando(true)
         const productosColeccion= collection(db,"productos");
         const docRef= doc(productosColeccion,id);
         getDoc(docRef)
-        .then((res)=> setproducto({id: res.id, ...res.data()}))
+        .then((res)=> {
+            if(res.data()){
+                setproducto({id: res.id, ...res.data()}) 
+            } else{
+                setinvalido(true)
+            }
+        } )
         .catch((error)=> seterror(true))
         .finally(()=> setcargando(false))
     }, [])
-    /* useEffect(() => {
-        setcargando(true);
-        productoporid(id)
-            .then((res) => {
-                seterror(null);
-                setproducto(res);
-            })
-            .catch((error) => seterror(true))
-            .finally(() => setcargando(false))
-    }, []) */
+    if(invalido){
+        return(
+            <div className='error-producto-detalle'>
+                <TbCoffeeOff className='icono-cafe'/>
+                <h2>No encontramos este producto</h2>
+                <Link className='boton' to={"/"}> Ver productos </Link>
+            </div>
+        )
+    }
     return (
         <main>
             {cargando? <Loader/>: <ItemDetail productoporid= {producto} ></ItemDetail>}
