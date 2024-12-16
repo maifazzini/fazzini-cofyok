@@ -13,8 +13,8 @@ const ItemDetail = ({ productoporid }) => {
     Toastify({
       text: `Agregaste al carrito ${cantidad} ${productoporid.nombre}`,
       duration: 3000,
-      gravity: "bottom", // `top` or `bottom`
-      position: "right", // `left`, `center` or `right`
+      gravity: "bottom", 
+      position: "right", 
       style: {
         background: "#CCA55E",
       },

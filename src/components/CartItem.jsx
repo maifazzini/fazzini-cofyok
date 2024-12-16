@@ -1,13 +1,21 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { IoTrashOutline } from "react-icons/io5";
+import { useCart } from "../context/CartContext"
 
 const CartItem = ({producto}) => {
+  const {removeItem} = useCart();
+  const eliminar = () =>{
+    removeItem(producto.id)
+  }
   return (
-    <div>
-      <img src={producto.imagen} alt={producto.nombre} />
-        <p>{producto.nombre}</p>
-        <p>Cantidad :{producto.cantidad}</p>
-        <p>Total unitario: ${ producto.precio * producto.cantidad}</p>
+    <div className='item-carrito'>
+      
+        <img src={producto.imagen} alt={producto.nombre} />
+          <h3>{producto.nombre}</h3>
+      
+        <p>Cant: {producto.cantidad}</p>
+        <p>Total: ${ producto.precio * producto.cantidad}</p>
+        <IoTrashOutline onClick={eliminar} />
     </div>
   )
 }

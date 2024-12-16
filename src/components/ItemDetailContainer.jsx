@@ -29,8 +29,8 @@ const ItemDetailContainer = () => {
     }, [])
     if(invalido){
         return(
-            <div className='error-producto-detalle'>
-                <TbCoffeeOff className='icono-cafe'/>
+            <div className='error-pagina'>
+                <TbCoffeeOff className='icono'/>
                 <h2>No encontramos este producto</h2>
                 <Link className='boton' to={"/"}> Ver productos </Link>
             </div>

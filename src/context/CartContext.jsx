@@ -1,9 +1,14 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 /* crear contexto */
 export const CartContext = createContext();
+/* carrito con local */
+const carritopersistente= JSON.parse(localStorage.getItem('carrito')) || [];
 /* proveedor y cliente */
 export const CartProvider = ({children}) =>{
-    const [cart, setCart]= useState([]);
+    const [cart, setCart]= useState(carritopersistente);
+    useEffect(()=>{
+        localStorage.setItem('carrito',JSON.stringify(cart));
+    }, [cart])
     /* añardir al carrito */
     const addItem = (item, cantidad)=>{ 
         if(isInCart(item.id)){
@@ -22,7 +27,7 @@ export const CartProvider = ({children}) =>{
     }
     /* eliminar item del carrito */
     const removeItem = (itemid)=>{
-        setCart(cart.filter((producto)=> producto.id ==! itemid));
+        setCart(cart.filter((producto)=> producto.id !== itemid));
     }
     /* fijarse si esta en el carrito */
     const isInCart= (id)=>{

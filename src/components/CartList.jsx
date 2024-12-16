@@ -10,16 +10,16 @@ const CartList = () => {
   const vaciarcarrito = () => {
     Swal.fire({
       title: "¿Estas seguro que queres vaciar el carrito?",
-      icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!"
+      confirmButtonColor: "#CCA55E",
+      cancelButtonColor: "#4B1B0D",
+      confirmButtonText: "Si, vaciar"
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire({
           title: "El carrito fue vaciado",
-          icon: "success"
+          icon: "success",
+          confirmButtonColor: "#CCA55E",
         });
         clear();
       }
@@ -27,11 +27,17 @@ const CartList = () => {
   };
 
   return (
-    <div>
+    <div className='carrito-contenedor'>
+      <h2>Tu carrito</h2>
       {cart.map((item) => <CartItem key={item.id} producto={item}> </CartItem>)}
-      <p>Total ${precioTotal()}</p>
-      <button className='boton' onClick={vaciarcarrito}>Vaciar carrito</button>
-      <Link className='boton' to={"/checkout"}>Terminar compra</Link>
+      <div className='carrito-total'>
+        <p>Total</p>
+        <p> ${precioTotal()}</p>
+      </div>
+      <div className='carrito-botones'>
+        <button className='boton' onClick={vaciarcarrito}>Vaciar carrito</button>
+        <Link className='boton' to={"/checkout"}>Terminar compra</Link>
+      </div>
     </div>
   )
 }
