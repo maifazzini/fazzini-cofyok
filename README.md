@@ -1,7 +1,7 @@
 # Cofyok ☕
 Este proyecto se trata de una tienda online de café de autor. Se desarrolló con React con Javascript como proyecto final del curso de CoderHouse. Además, se diseñó el logo y el packaging para representar elegancia y calidad con Adobe Illustrator y Photoshop.
 
-![image](./image/cofyok-navegabilidad.gif)
+![image](./public/image/cofyok-navegabilidad.gif)
 
 ## Instalacion 🔧
 - Clone el repositorio 
