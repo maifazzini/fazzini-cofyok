@@ -15,7 +15,7 @@ const CartItem = ({producto}) => {
       
         <p>Cant: {producto.cantidad}</p>
         <p>Total: ${ producto.precio * producto.cantidad}</p>
-        <IoTrashOutline onClick={eliminar} />
+        <IoTrashOutline onClick={eliminar}  className='icono-eliminar'/>
     </div>
   )
 }

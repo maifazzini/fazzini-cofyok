@@ -451,7 +451,9 @@ h1 {
   font-size: 24px;
   font-weight: 600;
 }
-
+.icono-eliminar{
+  font-size: 4vh;
+}
 .checkout{
   color: #4B1B0D;
   background-color: #FDF4E1;
