@@ -113,7 +113,7 @@ const Checkout = () => {
               <option value="retiradellocal"> Retira del local</option>
             </select>
             </div>
-          <button type="submit" className='boton'> Comprar</button>
+          <button type="submit"  className='boton'> Comprar</button>
           
         </form>
       </section>

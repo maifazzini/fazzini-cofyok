@@ -323,6 +323,8 @@ footer p{
   background-color: #FDF4E1;
   padding: 60px 150px;
   height: 100vh;
+  display: flex;
+  justify-content: center;
 }
 
 .detalle-del-producto {
@@ -346,6 +348,7 @@ footer p{
 .boton-carrito .boton{
   margin-left: 10px;
 }
+/* -------------------- media de detalle de producto----------------- */
 @media screen and (max-width: 1200px) {
   .detalle-del-producto-contenedor {
     padding: 80px;
@@ -404,7 +407,6 @@ footer p{
     text-align: center;
   }
 }
-/* -------------------- media de detalle de producto----------------- */
 @media screen and (max-width: 650px){
   .detalle-del-producto {
     justify-content: center;
