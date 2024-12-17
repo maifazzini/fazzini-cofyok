@@ -53,7 +53,8 @@ const Checkout = () => {
       <main  className='compra-realizada'>
         <BsCartCheck  className='icono'/>
         <div>
-          <h2>Tu compra fue realizada con exito</h2>
+          <h2>Gracias por tu compra {nombre} 🎉 </h2>
+          <h3>La operación fue realizada con exito</h3>
           <p>Por favor anota el siguiente id de compra</p>
           <p id='compraid'>{compraid}</p>
         </div>

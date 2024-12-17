@@ -13,8 +13,10 @@ const CartItem = ({producto}) => {
         <img src={producto.imagen} alt={producto.nombre} />
           <h3>{producto.nombre}</h3>
       
-        <p>Cant: {producto.cantidad}</p>
-        <p>Total: ${ producto.precio * producto.cantidad}</p>
+        <div>
+          <p>Cant: {producto.cantidad}</p>
+          <p>Total: ${ producto.precio * producto.cantidad}</p>
+        </div>
         <IoTrashOutline onClick={eliminar}  className='icono-eliminar'/>
     </div>
   )
